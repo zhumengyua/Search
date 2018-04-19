@@ -289,7 +289,14 @@ input::-ms-reveal {
   cursor: pointer;
   background: #396 url(../images/index07.png) center center no-repeat;
 }
-
+.icon {
+    width: 1.2em;
+    height: 48px;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    float: left;
+}
 .convert {
   height: 50px;
   float: left;
