@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="//at.alicdn.com/t/font_635699_3d7cctubhk9be29.js"></script>
+    <!--     <script src="//at.alicdn.com/t/font_635699_3d7cctubhk9be29.js"></script>
+ -->
     <link rel="stylesheet" href="css/main.css" type="text/css" />
 
     <style type="text/css">
@@ -62,16 +63,14 @@
     </div>
 </body>
 <script>  
-    keyWords.onkeypress = function () {
-        document.getElementById("dropDown").style.display = "block";
-        
-    }
+    //监控键盘是否有字符存在
     keyWords.oninput = function () {
+        document.getElementById("dropDown").style.display = "block";
+    }
+    keyWords.onkeyup = function () {
         var a = document.getElementById("keyWords").value
-        console.log(a)
-        if (a = '') {
+        if (a == '') {
             document.getElementById("dropDown").style.display = "none";
-            alert(111)
         }
 
     }
