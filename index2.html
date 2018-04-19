@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="bootstrap/js/npm.js"></script>
     <script src="//at.alicdn.com/t/font_635699_3d7cctubhk9be29.js"></script>
     <link rel="stylesheet" href="css/main.css" type="text/css" />
+
+    <style type="text/css">
+        .icon {
+            width: 1.2em;
+            height: 48px;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+            float: left;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,7 +38,7 @@
                         <div style="float:left;width: 1px;height: 40px; background: #396; margin-top:3px;"></div>
                     </div>
                     <div class="center">
-                        <input type="text" class="keyWord" id="keyWords" maxlength="1000">
+                        <input type="textarea" class="keyWord" id="keyWords" maxlength="1000">
                         <ul id="ulList" style="display: none;"></ul>
                     </div>
                     <div class="right" style="height:48px; float: right;">
@@ -40,12 +47,36 @@
                     </div>
                 </form>
             </div>
-            <div class="dropDown">
-
+            <div class="dropDown" id="dropDown">
+                <p>sss</p>
+                <p>sssss</p>
+                <p>sssss</p>
+                <p>sssss</p>
+                <p>sssss</p>
+                <p>sssss</p>
+                <p>sssss</p>
+                <p>sssss</p>
             </div>
         </div>
 
     </div>
 </body>
+<script>  
+    keyWords.onkeypress = function () {
+        document.getElementById("dropDown").style.display = "block";
+        
+    }
+    keyWords.oninput = function () {
+        var a = document.getElementById("keyWords").value
+        console.log(a)
+        if (a = '') {
+            document.getElementById("dropDown").style.display = "none";
+            alert(111)
+        }
+
+    }
+
+
+</script>
 
 </html>
